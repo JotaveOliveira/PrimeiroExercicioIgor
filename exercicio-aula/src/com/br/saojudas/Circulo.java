@@ -21,7 +21,10 @@ public class Circulo extends Figura {
 	}
 
 	@Override
-	public Double area() {
+	public Double area() throws Exception {
+		if(this.raio == null)
+			throw new  Exception("Não foi possivel calcular o a area");
+		
 		return (this.raio * this.raio)* Math.PI;
 		
 	}

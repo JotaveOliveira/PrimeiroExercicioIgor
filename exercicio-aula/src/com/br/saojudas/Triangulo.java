@@ -14,7 +14,7 @@ public class Triangulo extends Poligono {
 	@Override
 	public Double area() throws Exception { 
 		if(this.getAltura() == null || this.getBase() == null)
-			throw new Exception("Não foi possivel calcular o método Triangulo");
+			throw new Exception("Não foi possivel calcular a area");
 		
 		return (this.getAltura() * this.getBase())/ 2;	
 	}

@@ -53,7 +53,7 @@ public class QuadradoTest {
 	}
 
 	@Test(expected = Exception.class)
-	public void calculaDiagonalIsEmptyNoSucess() throws Exception {
+	public void calculaDiagonalNoSucess() throws Exception {
 
 		quadrado.setLado(null);
 

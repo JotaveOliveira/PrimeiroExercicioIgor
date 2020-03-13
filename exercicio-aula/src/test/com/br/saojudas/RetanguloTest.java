@@ -45,21 +45,23 @@ public class RetanguloTest {
 	public void calculaDiagonalSucess() throws Exception {
 
 		retangulo.setBase(Double.parseDouble("30"));
+		retangulo.setAltura(Double.parseDouble("50"));
 
 		Double diagonalQuadrado = retangulo.calculaDiagonal();
 
 		assertNotNull(diagonalQuadrado);
-		assertEquals(new Double(42.42640687119285), diagonalQuadrado);
+		assertEquals(new Double(2.9802322387695315E42), diagonalQuadrado);
 	}
 
 	@Test(expected = Exception.class)
-	public void calculaDiagonalIsEmptyNoSucess() throws Exception {
+	public void calculaDiagonalNoSucess() throws Exception {
 
 		retangulo.setBase(null);
+		retangulo.setAltura(null);
 
 		Double diagonalQuadrado = retangulo.calculaDiagonal();
 
 		assertNotNull(diagonalQuadrado);
-		assertEquals("Não foi possivel calcular a diagonal", diagonalQuadrado);
+		assertEquals("Não foi possivel calcular a area", diagonalQuadrado);
 	}
 }

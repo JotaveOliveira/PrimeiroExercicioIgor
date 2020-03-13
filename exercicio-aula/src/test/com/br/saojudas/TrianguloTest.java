@@ -28,7 +28,7 @@ public class TrianguloTest {
 		Double areaCalculada = triangulo.area();
 
 		assertNotNull(areaCalculada);
-		assertEquals("Não foi possivel calcular o método Triangulo", areaCalculada);
+		assertEquals("Não foi possivel calcular a area", areaCalculada);
 	}
 	
 	@Test(expected = NumberFormatException.class)
