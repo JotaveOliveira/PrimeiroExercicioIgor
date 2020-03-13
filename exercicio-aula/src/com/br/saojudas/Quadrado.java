@@ -23,7 +23,9 @@ public class Quadrado extends Poligono implements Diagonal{
 	}
 	
 	@Override
-	public Double calculaDiagonal() {
+	public Double calculaDiagonal() throws Exception {
+		if(this.lado == null) 
+			throw new Exception("Não foi possivel calcular a diagonal");
 		
 		return  this.lado * Math.sqrt(2);
 	}

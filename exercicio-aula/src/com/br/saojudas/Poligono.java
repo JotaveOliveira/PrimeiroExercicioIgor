@@ -29,7 +29,10 @@ public abstract class Poligono extends Figura{
 	}
 	
 	@Override
-	public Double area() {
+	public Double area() throws Exception {
+		if(this.base == null || this.altura == null) 
+			throw new Exception("Não foi possivel calcular a area");
+		
 		return this.base * this.altura;
 	}
 }
